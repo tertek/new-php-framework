@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "dev": "npx mix"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.4",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.4"
+  },
+  "devDependencies": {
+    "laravel-mix": "^6.0.49"
+  }
+}

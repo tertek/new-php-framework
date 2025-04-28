@@ -1,3 +1,18 @@
 <?php
 
-echo 'Hello World';
+?>
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/public/css/app.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+  <script src="/public/js/app.js"></script>
+</body>
+</html>
