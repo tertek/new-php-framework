@@ -1,0 +1,11 @@
+{
+    "name": "tertek/new-php-framework",
+    "description": "Example of a lightweight minimal PHP framework for modern website development.",
+    "authors": [
+        {
+            "name": "tertek",
+            "email": "tertek@proton.me"
+        }
+    ],
+    "require": {}
+}
