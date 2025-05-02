@@ -7,5 +7,8 @@
             "email": "tertek@proton.me"
         }
     ],
-    "require": {}
+    "require": {
+        "twig/twig": "^3.0",
+        "mindplay/php-vite": "^1.0"
+    }
 }

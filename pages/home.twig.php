@@ -3,12 +3,12 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?= $tags->css ?>
     </head>
     <body>
     <h1 class="text-3xl font-bold underline">
-        Hello world
+        Hello world  {{ "ok" }}
     </h1>
-    <?= $tags->js ?>
+    <script type="module" src="https://vite.new-php-framework.ddev.site/@vite/client" ></script>
+    <script src="https://vite.new-php-framework.ddev.site/app.js"></script>
     </body>
 </html>
