@@ -1,4 +1,5 @@
 import { defineConfig } from "vite"
+import tailwindcss from '@tailwindcss/vite'
 import path from "path"
 
 // https://vitejs.dev/config/
@@ -31,4 +32,9 @@ export default defineConfig({
       origin: /https?:\/\/([A-Za-z0-9\-\.]+)?(\.ddev\.site)(?::\d+)?$/,
     },
   },
+
+  plugins: [
+    tailwindcss(),
+  ],
+  
 })

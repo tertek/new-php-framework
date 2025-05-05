@@ -1,9 +1,2 @@
-h1 {
-    font-size: 32px;
-    font-weight: bold;
-    text-decoration: underline;
-}
 
-body {
-    background: red;
-}
+@import "tailwindcss";
