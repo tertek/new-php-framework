@@ -7,18 +7,16 @@ use mindplay\vite\Manifest;
 
 const BUILD_PATH = __DIR__ . "/../build";
 
-//  Setup Vite Manifest
+$dev = getenv('APP_ENV') !== 'production';
 
-if(is_dir(BUILD_PATH)) {
-    $dev = false;
-    $manifest_path = BUILD_PATH . '/.vite/manifest.json';
-    $base_path = BUILD_PATH;
-} else {
-    $dev = true;
-    $manifest_path = '';
+if($dev === true) {
     $base_path = getenv('VITE_SERVER_URI') . "/";
-}
+    $manifest_path = '';
 
+} else {
+    $base_path = BUILD_PATH;
+    $manifest_path = BUILD_PATH . '/.vite/manifest.json';
+}
 
 $vite = new Manifest(
     manifest_path: $manifest_path,
