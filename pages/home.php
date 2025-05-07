@@ -3,12 +3,12 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?= $tags->css ?>
+    <?= $vite->css ?>
     </head>
     <body>
     <h1 class="text-3xl font-bold underline">
         Hello world
     </h1>
-    <?= $tags->js ?>
+    <?= $vite->js ?>
     </body>
 </html>
