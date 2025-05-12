@@ -184,3 +184,7 @@ dist
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,composer,node,visualstudiocode
+
+# Vite Build directory
+/public/build*
+/public/build/*

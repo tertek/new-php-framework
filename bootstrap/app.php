@@ -5,14 +5,17 @@ use Twig\Environment;
 
 use mindplay\vite\Manifest;
 
-const BUILD_PATH = __DIR__ . "/../build";
-const ENTRY_PATH = __DIR__ . "/../resources/js/app.js";
+const BUILD_PATH = __DIR__ . "/../public/build/";
+const ENTRY_POINT = "resources/js/app.js";
 
 /**
  * VITE BACKEND INTEGRATION
  * 
  * Create tags based on mode, parses manifest or includes Vite development server
  * 
+ * $manifest_path: Points to the Vite manifest.json file created for the production build.
+ * $base_path: is relative to your public web root - it is the root folder from which Vite's production 
+ * assets are served, and/or the root folder from which Vite serves assets dynamically in development mode.
  */
 function getVite($manifest_path, $base_path, $dev) {
     
@@ -22,7 +25,7 @@ function getVite($manifest_path, $base_path, $dev) {
         dev: $dev
     );
 
-    return $manifest->createTags(ENTRY_PATH);
+    return $manifest->createTags(ENTRY_POINT);
 }
 /**
  * Vite Development Server is running if headers return 200 from Vite Server URI
@@ -33,7 +36,7 @@ if(substr(get_headers(getenv('VITE_SERVER_URI') . '/@vite/client')[0], 9, 3) == 
     $vite = getVite('', getenv('VITE_SERVER_URI') . "/", true);
 
 } else if(is_dir(BUILD_PATH)) {
-    $vite = getVite(BUILD_PATH, BUILD_PATH . '/.vite/manifest.json', false);    
+    $vite = getVite( BUILD_PATH . '/manifest.json', "build/", false);   
 }
 else {
     $vite = (object) [

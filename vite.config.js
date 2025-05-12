@@ -4,6 +4,10 @@ import path from "path"
 
 // https://vitejs.dev/config/
 export default defineConfig({
+
+  //  Do not copy public dir into build
+  publicDir: false,
+
   // Add entrypoint
   build: {
     // our entry
@@ -12,9 +16,10 @@ export default defineConfig({
     },
 
     // manifest
-    manifest: true,
+    manifest: 'manifest.json',
 
-    outDir: './build',
+    // store build into public directory so that it is accessible
+    outDir: './public/build',
   },
 
   // Adjust Vite's dev server for DDEV
